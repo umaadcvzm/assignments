@@ -1,0 +1,65 @@
+#include<stdio.h>
+void read_arr(int a[10][10],int row,int col)
+{
+    int i,j;
+    for(i=0;i<row;i++)
+    {
+    for(j=0;j<col;j++)
+    {
+        printf("Enter Element %d %d : ",i,j);
+        scanf("%d",&a[i][j]);
+            }
+    }
+}
+void add_arr(int m1[10][10],int m2[10][10],int m3[10][10],int row,int col)
+{
+    int i,j;
+    for(i=0;i<row;i++)
+    {
+    for(j=0;j<col;j++)
+    {
+    m3[i][j] =  (m1[i][j] + m2[i][j]);
+    }
+    }
+}
+void sub_arr(int m1[10][10],int m2[10][10],int m3[10][10],int row,int col)
+{
+    int i,j;
+    for(i=0;i<row;i++)
+    {
+    for(j=0;j<col;j++)
+    {
+    m3[i][j] =  (m1[i][j] - m2[i][j]);
+    }
+    }
+}
+void print_arr(int m[10][10],int row,int col)
+{
+    int i,j;
+    for(i=0;i<row;i++)
+        {
+        for(j=0;j<col;j++)
+        {
+            printf("%d ",m[i][j]);
+         }
+        printf("\n");
+        }
+}
+void main()
+{
+    int m1[10][10],m2[10][10],m3[10][10],row,col;
+    clrscr();
+    printf("Enter number of rows :");
+    scanf("%d",&row);
+    printf("Enter number of colomns :");
+    scanf("%d",&col);
+    read_arr(m1,row,col);
+    read_arr(m2,row,col);
+    printf("Addition\n");
+    add_arr(m1,m2,m3,row,col);
+    print_arr(m3,row,col);
+    printf("Subtraction\n");
+    sub_arr(m1,m2,m3,row,col);
+    print_arr(m3,row,col);
+    return 0;
+}
