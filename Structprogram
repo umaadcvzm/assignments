@@ -1,0 +1,37 @@
+#include<stdio.h> 
+ #include<conio.h> 
+ struct student 
+ { 
+        int rno, m1,m2,m3,total;  
+        char name[30];
+        float avg; 
+        char res; 
+ }s[30];
+        void main() 
+      {
+
+        int i,n; 
+        printf("Enter No of Students : "); 
+        scanf("%d",&n); 
+        for(i=0;i<n;i++) 
+        {
+             printf("\nEnter the Student Roll Number :  "); 
+  .          scanf("%d",&s[i].rno); 
+             printf("\nEnter the Student Name :");
+             scanf("%s",s[i].name); 
+             printf("\nEnter the Three subjects Marks : "); 
+             scanf("%d%d%d",&s[i].m1,&s[i].m2,&s[i].m3
+             s[i].total = s[i].m1+s[i].m2+s[i].m3; 
+                
+             if(s[i].m1>=35 && s[i].m2>=35 && s[i].m3>=35) 
+             s[i].res='P';
+             else 
+             s[i].res= 'F'; 
+              }
+              printf("\nStudent Result\n");
+               for(i=0;i<no;i++) 
+               { 
+      printf("\n%d\t%s\t%d\t%d\t%d\t %d\t %c",s[i].rno,s[i].name,s[i].m1,s[i].m2,s[i].m3,s[i].total,s[i].res); 
+                            } 
+                               return 0; 
+ }  
